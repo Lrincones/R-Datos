@@ -1,2 +1,3 @@
 # R-Datos
-Draft to create a small Data Repository
+Draft to create the functions and code for reading the files
+to populate the repository
