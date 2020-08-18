@@ -107,5 +107,5 @@ write_xlsx(REPO_SKILLS,"REPO_SKILLS.xlsx")
 
 saveRDS(REPO_SKILLS, "REPO_SKILLS.rds")
 
-# REPO_SKILLS_1 <- readRDS("REPO_SKILLS.rds") # to cpmpare if needed, for now is commented
+
 
