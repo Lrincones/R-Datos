@@ -17,6 +17,7 @@ library(rvest)
 library(stringr)
 library(lubridate)
 library(writexl)
+library(xlsx) 
 #
 # to search for the characters [], inside them is the IRFFG code. This for Italy and extract the code
 # (?<=\[).*(?=\])  
