@@ -15,6 +15,7 @@ library(knitr)
 library(magick)
 library(rvest)
 library(writexl)
+library(xlsx)
 #
 # Directory "C:/Users/luis.rincones/OneDrive - MSF/Documents/0_OM_Repository"
 setwd("C:/Users/luis.rincones/OneDrive - MSF/Documents/0-DataRep/0-July_2020-Repository/Output")
