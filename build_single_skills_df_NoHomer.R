@@ -1,3 +1,7 @@
+#
+# Revisar el codigo para eliminar lo de Homere
+# solo OCs, PS, Branchs files
+#
 library(flexdashboard)
 library(readxl)
 library(tidyverse)
@@ -36,6 +40,7 @@ REPO_SKILLS <- data.frame(Office = character(),
                           Scale_ID=character(),
                           Name_Scale = character(),
                           stringsAsFactors=FALSE)
+
 # Mapping for Italy need to document it the excel file 
 # "C:\Users\luis.rincones\OneDrive - MSF\Documents\0_OM_Repository\References\Mapping_Repository_Souk_Maps.xlsx"
 # has the basics of the mapping need to scale it for more flies and code the mapping using a mapping input
@@ -99,7 +104,6 @@ for(i in low_B +2 : top_B + 2){
   REPO_SKILLS[i,5] = level_t  # Level_type
 
 }
-
 
 
 # save REPO_SKILLS for future usage in Excel and RDS format reading added for verification
