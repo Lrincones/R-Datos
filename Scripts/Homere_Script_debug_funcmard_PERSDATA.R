@@ -18,7 +18,17 @@ library(lubridate)
 library(hablar)
 # Start with OCG Homere Personal Data
 
-
+# Function to clear the names blanks for "_"
+colum_name_subs <- function(obj_load){
+  object_names <- colnames(obj_load)
+  for (x in 1 : length(object_names)){
+    object_names[x] = chartr(" ", "_", object_names[x])
+  }
+  for (x  in 1 :length(object_names)) {
+    colnames(obj_load)[x] = object_names[x]
+  }
+  return(obj_load)
+}
 # function to prepare the file for the office ID loaded example "OCGHomerePerData" 
 # ####################### Needs to improve, simplify 
 # To prepare the data for the ID files from the source data given
@@ -96,7 +106,7 @@ prepare_offc_IDS <- function(office_file , ID_datos, data_fram_1, col_param, old
 } # End of function
 
 #
-# End of Functions Sections 
+# End of Functions Sections so far TWO FUNCTIONS  colum_name_subs and prepare_offc_IDS
 #
 
 #
@@ -112,7 +122,7 @@ prepare_offc_IDS <- function(office_file , ID_datos, data_fram_1, col_param, old
 # Get the lis of files to be read in "archivos"
 path_1 <-  "C:/Users/luis.rincones/OneDrive - MSF/Documents/0-DataRep/0-July_2020-Repository/Input/"
 archivos <- list.files(path = path_1,recursive = F , 
-                       all.files = FALSE, full.names = TRUE, pattern = "*OCG*")
+                       all.files = FALSE, full.names = TRUE, pattern = "*Home*")
 # How many archivos to be read
 num_arch = length(archivos)
 arch_read = 1
